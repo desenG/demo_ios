@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files
+
+#ifdef __OBJC__
+    #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    #define STORYBOARD_NAME  ( IS_IPAD ? @"Main_iPad" : @"Main")
+    #define APPDELEGATE     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <CoreData/CoreData.h>
+    #import "OBShapedButton.h"
+    #import <FBSDKCoreKit/FBSDKCoreKit.h>
+    #import <FBSDKLoginKit/FBSDKLoginKit.h>
+    #import <FBSDKShareKit/FBSDKShareKit.h>
+    #import <CoreMedia/CoreMedia.h>
+    #import <MobileCoreServices/UTCoreTypes.h>
+    #import <AssetsLibrary/AssetsLibrary.h>
+    #import <MediaPlayer/MediaPlayer.h>
+    #import "SWRevealViewController.h"
+    #import "AppConstants.h"
+    #import "WebServiceConstant.h"
+    #import "WebService.h"
+    #import "MessageConstant.h"
+    #import "GiFHUD.h"
+    #import "Connectivity.h"
+    #import "AppDelegate.h"
+    #import "Navigator.h"
+    #import "ResourceHelper.h"
+
+#endif
