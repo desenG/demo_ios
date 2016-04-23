@@ -48,7 +48,7 @@
 {
     if([[FacebookHelper sharedInstance] isFacebookLoggedIn])
     {
-        [Navigator pushViewControllerFromCurrentViewController:self withViewControllerIDName:@"MyPageViewController"  andAnimated:YES];
+        [Navigator openViewControllerAsNewRootFromViewController:self withIDName:@"MyPageViewController"];
         return YES;
     }
     return NO;

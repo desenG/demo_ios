@@ -20,7 +20,7 @@
 - (IBAction)actionLogout:(id)sender {
     [[FacebookHelper sharedInstance] logoutWithFunctionBlock:^{
         [[AccountInfoCache new] removeIsLOGGEDIN];
-        [Navigator goToRootViewController:self withAnimated:YES];
+        [Navigator openViewControllerAsNewRootFromViewController:self withIDName:@"LoginViewController"];
     }];
 }
 

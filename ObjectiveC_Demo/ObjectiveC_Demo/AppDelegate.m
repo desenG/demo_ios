@@ -23,7 +23,7 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
-    [Navigator openIntialViewControllerAsNewRoot];
+    [Navigator openIntialViewControllerAsNewRootInAppDelegate];
 
     return YES;
 }

@@ -8,17 +8,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Navigator : NSObject
-+(UIViewController *)getCurrentTopViewController;
-
-+(void)goToRootViewController:(UIViewController*)viewController
-                 withAnimated:(BOOL)Animated;
-
-+(void)openIntialViewControllerAsNewRoot;
-
-+(void)openViewControllerAsNewRootWithIDName:(NSString*)VCIDname;
-
 +(void)openViewControllerAsNewRootFromViewController:(UIViewController*)viewController
                                           withIDName:(NSString*)VCIDname;
+
++(void)openViewControllerAsNewRootWithIDName:(NSString*)VCIDname;
 
 +(void)presentViewControllerWithIDName:(NSString*)VCIDname
                     fromViewController:(UIViewController*)superViewController
@@ -30,4 +23,17 @@
 
 +(void)popFromViewController:(UIViewController*)viewController
                 withAnimated:(BOOL)Animated;
+
++(void)goToRootViewController:(UIViewController*)viewController
+                 withAnimated:(BOOL)Animated;
+
+- (UIViewController *)getParentOfViewController:(UIViewController*)viewController;
+
++(UIViewController *)getCurrentTopViewController;
+
+//used in app delegate
++(void)openIntialViewControllerAsNewRootInAppDelegate;
+
++(void)openViewControllerAsNewRootWithIDNameInAppDelegate:(NSString*)VCIDname;
+
 @end
